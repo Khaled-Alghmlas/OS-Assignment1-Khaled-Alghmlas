@@ -10,8 +10,12 @@ Answer all 4 questions with detailed explanations. Each answer should be **3-5 s
 **Question**: Explain the difference between a **thread** and a **process**. Why did we use threads in this assignment instead of creating separate processes?
 
 **Your Answer:**
+A process is an heavy, independent program with its own dedicated memory space and system resources.
+A thread is a lightweight program that exists within a process and shares its memory with it's parent.
 
-[Write your answer here. Consider: What is a process? What is a thread? How do they differ in terms of memory, resources, creation overhead? Why are threads more suitable for this simulation?]
+We used threads because creating 16 separate processes would be highly resource-intensive and very slow compared to threads.
+
+Threads allow our Java simulation to quickly switch contexts ( switch between threads rapidly, creating the illusion of parallelism), run concurrently in shared memory, and easily track global variables like the context switch counter.
 
 ---
 
