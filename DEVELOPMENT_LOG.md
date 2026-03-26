@@ -64,6 +64,7 @@ Struggling to understand the request, and the code in general
 
 **Solution**: 
 Used external sources to simplify Java threading logic and map out how SchedulerSimulation passes data to the Process objects.
+
 **Time spent**: 
 60 minutes.
 ---
