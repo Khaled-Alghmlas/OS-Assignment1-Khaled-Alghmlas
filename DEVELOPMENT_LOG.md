@@ -32,7 +32,7 @@ Document your development process as you work on the assignment. Add entries sho
 
 ## Your Development Log:
 
-### Entry 1 - [March 26th, 2026. 9:41 PM]
+### Entry 1 - [March 26th, 2026, 9:41 PM]
 **What I did**: Forked the repository and set up my student ID
 
 **Details**: 
@@ -49,17 +49,23 @@ Document your development process as you work on the assignment. Add entries sho
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**: 
+### Entry 2 - [March 27th, 2026, 12:02 AM]
+**What I did**: Added the first required feature! 
 
 **Details**: 
+- Finally understood how the code works
+- The feature is (Priority field)
+- Added an integer variable (1-5) to the Process class and updated its constructor.
+- Modified the addProcessToQueue method in SchedulerSimulation to generate a random priority and print it in the message.
+  
 
 **Challenges**: 
+Struggling to understand the request, and the code in general
 
 **Solution**: 
-
+Used external sources to simplify Java threading logic and map out how SchedulerSimulation passes data to the Process objects.
 **Time spent**: 
-
+60 minutes.
 ---
 
 ### Entry 3 - [Date and Time]
