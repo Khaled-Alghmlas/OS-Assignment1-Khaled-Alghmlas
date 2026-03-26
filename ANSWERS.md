@@ -25,15 +25,32 @@ Threads allow our Java simulation to quickly switch contexts ( switch between th
 
 **Your Answer:**
 
-[Write your answer here. Describe the specific behavior - where does the process go? When does it run again? Give an example from your actual program output showing a process that was re-queued.]
+In Round-Robin scheduling, a process that finishes its time quantum is paused and forced to yield the CPU so the the next process can enter the CPU.
+
+The scheduler then moves this process to the back of the ready queue so that it waits for its next turn. This mechanism prevents CPU starvation by ensuring no single heavy task can use all the system resources.
 
 Example from my output:
 ```
-[Paste a relevant snippet from your program output here showing a process being re-queued]
+┌─ Ready Queue ─────────────────────────────────────────────────────────────────
+│ [P2 → P3 → P4 → P5 → P6 → P7 → P8 → P9 → P10 → P11 → P12 → P13 → P14 → P15 → P16]
+└───────────────────────────────────────────────────────────────────────────────
+
+  ▶ P1 executing quantum [3000ms] 
+  ⚡ Quantum progress: [███████████████] 100%
+  ⏸ P1 completed quantum 3000ms │ Overall progress: [██████████████████░░] 94%
+    Remaining time: 174ms
+  ↻ P1 yields CPU for context switch
+
+  ➕ P1 (Priority: 1) added to ready queue │ Burst time: 3174ms
+┌─ Ready Queue ─────────────────────────────────────────────────────────────────
+│ [P3 → P4 → P5 → P6 → P7 → P8 → P9 → P10 → P11 → P12 → P13 → P14 → P15 → P16 → P1]
+└───────────────────────────────────────────────────────────────────────────────
+
 ```
 
 **Explanation of example:**
-[Explain what's happening in the output snippet you pasted]
+In my output, P1 ran for its time quantam which is 3000ms, but it still had 174ms.
+Because it hasn't finished, it yields the CPU and is removed from the active state, then moves to the back of the ready queue to await it's turn.
 
 ---
 
