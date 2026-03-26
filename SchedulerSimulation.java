@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Random;
 
+
 // ANSI Color Codes for enhanced terminal output
 class Colors {
     public static final String RESET = "\u001B[0m";
@@ -21,6 +22,7 @@ class Colors {
     public static final String BRIGHT_CYAN = "\u001B[96m";
     public static final String BRIGHT_YELLOW = "\u001B[93m";
     public static final String BRIGHT_GREEN = "\u001B[92m";
+    public static final String test;
 }
 
 // Class representing a process that implements Runnable to be run by a thread
