@@ -33,7 +33,7 @@ class Process implements Runnable {
     private int remainingTime; // Time left for the process to finish its execution
     //Feature (1): Add a priority field to the Process class (integer 1-5, where 5 is highest)
     private int priority; // priority level of the process (1 to 5, 5 is highest priority)
-    // Constructor to initialize the process with name, burst time, and time quantum and priority (Feature (1))
+    // Constructor to initialize the process with name, burst time, and time quantum and **priority -> (Feature (1))
     public Process(String name, int burstTime, int timeQuantum, int priority) {
         this.name = name;
         this.burstTime = burstTime;
@@ -154,6 +154,7 @@ class Process implements Runnable {
 }
 
 public class SchedulerSimulation {
+    public static int contextSwitchesCount = 0; // Feature (2): Static counter to track the number of context switches
     public static void main(String[] args) {
         // ⚠️ IMPORTANT: Put your student ID here to seed the random number generator
         // This makes your output unique to you - DO NOT forget to change this!
@@ -251,6 +252,9 @@ public class SchedulerSimulation {
             System.out.println(Colors.BOLD + Colors.MAGENTA + "└" + "─".repeat(79) + Colors.RESET + "\n");
             
             // Start the thread, which will run the process for one time quantum
+
+            // Feature (2): Increment the context switch counter each time we start a new thread (i.e., switching to a new process)
+            contextSwitchesCount++;
             currentThread.start();
             
             try {
@@ -274,6 +278,7 @@ public class SchedulerSimulation {
                     System.out.println(Colors.BRIGHT_YELLOW + "  ⚠ " + Colors.CYAN + process.getName() + 
                                       Colors.RESET + Colors.YELLOW + " is the last process → running to completion" + 
                                       Colors.RESET);
+                    contextSwitchesCount++; // Feature (2): Increment context switch count before running the last process
                     process.runToCompletion(); // Run until the process completes
                 }
             }
@@ -290,6 +295,10 @@ public class SchedulerSimulation {
         System.out.println(Colors.BOLD + Colors.BRIGHT_GREEN + 
                           "╚════════════════════════════════════════════════════════════════════════════════╝" + 
                           Colors.RESET + "\n");
+                           System.out.println("\n" +  "╔════════════════════════════════════════════════════════════════════════════════╗"+"\n"
+                            + Colors.YELLOW + "                           Total Context Switches: " + Colors.BRIGHT_GREEN + contextSwitchesCount + Colors.RESET + "\n"  // Feature (2): Print the total number of context switches at the end of the simulation
+                            + "╚════════════════════════════════════════════════════════════════════════════════╝" );
+
     }
     
     // Method to add a process to the queue and map, while printing a "ready" message
