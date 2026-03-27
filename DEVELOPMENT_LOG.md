@@ -32,7 +32,7 @@ Document your development process as you work on the assignment. Add entries sho
 
 ## Your Development Log:
 
-### Entry 1 - [March 26th, 2026. 9:41 PM]
+### Entry 1 - [March 26th, 2026, 9:41 PM]
 **What I did**: Forked the repository and set up my student ID
 
 **Details**: 
@@ -49,30 +49,41 @@ Document your development process as you work on the assignment. Add entries sho
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**: 
+### Entry 2 - [March 27th, 2026, 12:02 AM]
+**What I did**: Added the first required feature! 
 
 **Details**: 
+- Finally understood how the code works.
+- The feature is (Priority field).
+- Added an integer variable (1-5) to the Process class and updated its constructor.
+- Modified the addProcessToQueue method in SchedulerSimulation to generate a random priority and print it in the message.
+  
 
 **Challenges**: 
+Struggling to understand the request, and the code in general
 
 **Solution**: 
+Used external sources to simplify Java threading logic and map out how SchedulerSimulation passes data to the Process objects.
 
 **Time spent**: 
-
+60 minutes.
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**: 
+### Entry 3 - [March 28th, 2026, 2:40 AM]
+**What I did**: Finally finished the second feature!
 
 **Details**: 
+- Started to get the hang of Processes and Threads finally :)
+- The feature is (Context switch counter).
+- It's a static variable declared before the main method.
+- Was by far the easiest question, til now of course.
 
-**Challenges**: 
+**Challenges**: Remembering core ideas about static vs instance variables. I needed to make sure the counter didn't reset every time a new process was created.
 
-**Solution**: 
+**Solution**: Realized that using static keword is necessary because I needed a class-level variable, unlike an instance variable which is object-level.
 
 **Time spent**: 
-
+30 minutes.
 ---
 
 ### Entry 4 - [Date and Time]
