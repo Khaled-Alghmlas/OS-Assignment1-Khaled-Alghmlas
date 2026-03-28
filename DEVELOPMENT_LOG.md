@@ -86,16 +86,21 @@ Used external sources to simplify Java threading logic and map out how Scheduler
 30 minutes.
 ---
 
-### Entry 4 - [Date and Time]
-**What I did**: 
+### Entry 4 - [[March 28th, 2026, 4:42 AM]
+**What I did**: Third and final feature added at last.
 
 **Details**: 
+- Finished all required features.
+- The feature is (Waiting time tracking).
+- Successfully implemented time tracking for each of the processes.
+- Corrected a logical error in the previous feature where total context switches would be printed every switch.
+  
+**Challenges**: So many logical and syntax errors, and difficulty in grasping the concept.
 
-**Challenges**: 
-
-**Solution**: 
-
+**Solution**: Took a deep breath, and reviewed everything line by line to find the problems in the code.
+Requested some assistance from one of my smart colleagues to help in understanding this hard concept, and once again used external to break it down evenn further.
 **Time spent**: 
+2 hours.
 
 ---
 
