@@ -380,7 +380,7 @@ public class SchedulerSimulation {
         long totalWait = 0;
 
         for (Process p : finishedProcess) {
-            System.out.println(p.getName() + " | Waited for: " +Colors.BRIGHT_YELLOW+ p.getTotalWaitTime() + "ms"+ Colors.RESET);
+           System.out.println(p.getName() + " | Burst time: " + p.getBurstTime() + "ms | Wait time: " + Colors.BRIGHT_YELLOW + p.getTotalWaitTime() + "ms" + Colors.RESET);
             totalWait += p.getTotalWaitTime();
         }
 
