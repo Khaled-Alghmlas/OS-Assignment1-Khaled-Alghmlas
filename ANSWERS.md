@@ -10,7 +10,7 @@ Answer all 4 questions with detailed explanations. Each answer should be **3-5 s
 **Question**: Explain the difference between a **thread** and a **process**. Why did we use threads in this assignment instead of creating separate processes?
 
 **Your Answer:**
-A process is an heavy, independent program with its own dedicated memory space and system resources.
+A process is a heavy, independent program with its own dedicated memory space and system resources.
 A thread is a lightweight program that exists within a process and shares its memory with it's parent.
 
 We used threads because creating 16 separate processes would be highly resource-intensive and very slow compared to threads.
@@ -60,17 +60,15 @@ Because it hasn't finished, it yields the CPU and is removed from the active sta
 
 **Your Answer:**
 
-[Write your answer here. For each state, explain when P1 enters that state during the simulation. Use your understanding of the code to trace through the lifecycle.]
+1. **New**: P1 is initialized as an object [Thread P1 = new Thread(process)], it is created but still hasn't started.
 
-1. **New**: [When is P1 in New state?]
+2. **Runnable**: When it is triggered by [P!.start()], P1 then enters the ready queue and awaist the scheduler to allocate the time quantum.
 
-2. **Runnable**: [When does P1 become Runnable?]
+3. **Running**: Then, The scheduler selects P! when [P1.run()] is called, subsequently, the method executes the process on the CPU
 
-3. **Running**: [When is P1 Running?]
+4. **Waiting**: When the process waits for an I/O, Processing delays, or when it is forced to yield the CPU so that other processes can start running, we can simulate waiting by [Thread.sleep()].
 
-4. **Waiting**: [When/why would P1 be Waiting?]
-
-5. **Terminated**: [When is P1 Terminated?]
+5. **Terminated**: P1 finishes its [run()] method. The main thread may also call [P1.join()] to confirmed completion.
 
 ---
 
