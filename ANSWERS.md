@@ -78,31 +78,30 @@ Because it hasn't finished, it yields the CPU and is removed from the active sta
 
 **Your Answer:**
 
-### Example 1: [Name of application/scenario]
+### Example 1: Task Management in Desktop Operating System.
 
-**Description**: 
-[Describe the real-world scenario or application]
-
-**Why Round-Robin works well here**: 
-[Explain why Round-Robin scheduling is suitable. Consider fairness, responsiveness, predictability, etc.]
-
-### Example 2: [Name of application/scenario]
-
-**Description**: 
-[Describe the real-world scenario or application]
+**Description**: A computer that is actively executing multipule tasks such as running a video game, an IDE (like VS code), and a media player.
 
 **Why Round-Robin works well here**: 
-[Explain why Round-Robin scheduling is suitable. Consider fairness, responsiveness, predictability, etc.]
+Round Robin works well because it provieds predictability, through rapid cycles between live threads. The OS ensures the mouse and keyboard stay responsive while heavy background tasks are running.
+
+### Example 2: Web Server with multipule users.
+
+**Description**: 
+A server processes many HTTP requests from different users.
+
+**Why Round-Robin works well here**: 
+Because it provides responsives and fairness, user A might download a large 5GB file, and user B who only needs a 10KB pixelated image, user A will not be able to starve the CPU and by using Round Robin it ensures justice to the user B.
 
 ---
 
 ## Summary
 
 **Key concepts I understood through these questions:**
-1. 
-2. 
-3. 
+1. How methods ( such as join(), start() ) in Java can trigger state transitons
+2. The different states of a process 
+3. How fairness is achieved through Round Robin
 
 **Concepts I need to study more:**
-1. 
-2. 
+1. Thread synchronization 
+2. Overhead of Context switching (How to choose/pick the fairest time quantum)
