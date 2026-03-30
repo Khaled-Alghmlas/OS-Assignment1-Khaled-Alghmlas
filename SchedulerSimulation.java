@@ -362,18 +362,18 @@ public class SchedulerSimulation {
         // Print a message indicating the process has entered the ready queue
 
         /*Feature (1): Print the priority of the process when it is added to the ready queue 
-          Example output: "P1 (Priority: 4) enters the ready queue..." 
+          Example output: P2 (Priority: 3) added to ready queue 
         */  
       
         System.out.println(Colors.BLUE + "  ➕ " + Colors.BOLD + Colors.CYAN + process.getName() + 
-                          Colors.RESET + Colors.BRIGHT_WHITE + " (Priority: " + process.getPriority() + ")" + // Feature (1): Print priority in the message
+                          Colors.RESET + Colors.BRIGHT_WHITE + " | Priority Level: " + process.getPriority() + " | " + // Feature (1): Print priority in the message
                           Colors.RESET + Colors.BLUE + " added to ready queue" + Colors.RESET + 
                           " │ Burst time: " + Colors.YELLOW + process.getBurstTime() + "ms" + 
                           Colors.RESET);
     }
 
    // Feature (3): Method to display waiting time summary table
-    // Feature (3): Simplified Waiting Time Summary
+    // Feature (3): Waiting Time Summary
     public static void printWaitingTimeSummary() {
         System.out.println("\n                           ***Final Statistics***"+Colors.RESET);
         
