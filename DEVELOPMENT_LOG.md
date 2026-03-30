@@ -98,23 +98,29 @@ Used external sources to simplify Java threading logic and map out how Scheduler
 **Challenges**: So many logical and syntax errors, and difficulty in grasping the concept.
 
 **Solution**: Took a deep breath, and reviewed everything line by line to find the problems in the code.
-Requested some assistance from one of my smart colleagues to help in understanding this hard concept, and once again used external to break it down evenn further.
+Requested some assistance from one of my smart colleagues to help in understanding this hard concept, and once again used external to break it down even further.
+
 **Time spent**: 
 2 hours.
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**: 
+### Entry 5 - [March 29th, 2026, 6:12 AM]
+**What I did**: Final touches & Reviewing code
 
 **Details**: 
+- Caught a detail I missed in the third feature, which is "Burst Time" so I have added it to the final summary table.
+- Completed all questions in ANSWERS.md and fixed some grammar mistakes.
+- Conducted a final logical audit to ensure all three features work together without any errors.
 
-**Challenges**: 
+**Challenges**: Ensuring the final output was compliant with assignment requirements.
+
 
 **Solution**: 
+Performed a line by line analysis to compare code output and project requirements to make sure all details were correctly applied.
 
 **Time spent**: 
-
+90 minutes.
 ---
 
 ### Entry 6 - [Optional - Date and Time]
